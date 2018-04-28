@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  </head>
+    <body>
+      <input id ="input"></input>
+      <button type="submit"id ="submit">Click on this text!</button>
+      <p></p>
+    </body>
+  <script>
+  $( document ).ready(function() {
+    $('#submit').click(function(){
+      let input = parseInt($('#input').val() );
+
+      console.log(typeof(input))
+      function multiples(input){
+
+        let numArr=[]
+
+        for(let i=1;i <=input;i++){
+          if(i %3==0|| i % 5 ==0 ){
+            numArr.push(i);
+          }
+        }
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+          // return
+          console.log(numArr.reduce(reducer))
+
+      }
+      multiples(input);
+    })
+    });
+  </script>
+</html>
